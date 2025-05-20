@@ -1,6 +1,6 @@
 # My Professional Web Developer Portfolio
 
-![Portfolio Screenshot](public/images/portfolio-screenshot.png) 
+![Portfolio Screenshot](src/assets/images/screenshot-20250520162139.png) 
 <!-- TODO: Add a nice screenshot of your portfolio here. Place it in public/images/ and update the path. -->
 
 Welcome to the repository for my personal web developer portfolio! This project showcases my skills, projects, and journey into web development. It's built with modern web technologies and designed to provide a clean, professional, and engaging overview of my capabilities.
