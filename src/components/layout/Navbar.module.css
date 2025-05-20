@@ -1,0 +1,109 @@
+/* src/components/layout/Navbar.module.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #0e0c0c; /* Or a theme color */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Sticky navbar */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it's above other content */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .navbar.scrolled { /* Style for when page is scrolled */
+    background-color: #2a9d8f; /* Slightly transparent white */
+    backdrop-filter: blur(5px); /* Frosted glass effect */
+  }
+  
+  .logo a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #f6f6f7; /* Or your brand color */
+    text-decoration: none;
+  }
+  
+  .navLinks {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem; /* Spacing between links */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navLinks li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 0.5rem 0; /* Add padding for better click area and underline positioning */
+    position: relative;
+    transition: color 0.2s ease;
+  }
+  
+  .navLinks li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #007bff;
+    transition: width 0.3s ease;
+  }
+  
+  .navLinks li a:hover,
+  .navLinks li a.active { /* Style for active link */
+    color: #eaedf0;
+  }
+  
+  .navLinks li a:hover::after,
+  .navLinks li a.active::after {
+    width: 100%;
+  }
+  
+  .menuIcon {
+    display: none; /* Hidden on desktop */
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .navLinks {
+      display: none; /* Hide links by default on mobile */
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 100%; /* Position below the navbar */
+      left: 0;
+      background-color: #fff;
+      padding: 1rem 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+  
+    .navLinks.open {
+      display: flex; /* Show links when menu is open */
+    }
+  
+    .navLinks li {
+      text-align: center;
+      width: 100%;
+    }
+  
+    .navLinks li a {
+      display: block; /* Make links take full width */
+      padding: 1rem;
+    }
+  
+    .navLinks li a::after { /* Adjust mobile underline if needed or remove */
+      display: none;
+    }
+  
+    .menuIcon {
+      display: block; /* Show hamburger icon on mobile */
+    }
+  }

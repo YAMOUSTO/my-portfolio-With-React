@@ -1,0 +1,65 @@
+.heroContainer {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #2a9d8f; 
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 0px solid #dee2e6;
+  }
+  
+  .nameTitle {
+    font-size: clamp(2.5rem, 5vw, 4rem); 
+    color: #e1e7ec; 
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .subtitle {
+    font-size: clamp(1.2rem, 2.5vw, 1.75rem); 
+    color: #dbe0e6; 
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    max-width: 600px; 
+  }
+  
+  .ctaButton {
+    background-color: #1b18be;
+    color: white;
+    padding: 0.8rem 1.8rem;
+    border: none;
+    border-radius: 50px; /* Pill shape */
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+  }
+  
+  .ctaButton:hover {
+    background-color: #4947b9;
+    transform: translateY(-2px); 
+  }
+  
+  .socialLinks {
+    margin-top: 2.5rem; 
+    display: flex; 
+    gap: 1.5rem; 
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .socialLink {
+    color: #333; 
+    font-size: 1.8rem; 
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out; 
+    display: inline-block;
+  }
+  
+  .socialLink:hover {
+    color: #b7c7d8; 
+    transform: scale(1.2); 
+  }

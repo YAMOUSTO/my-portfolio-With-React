@@ -1,0 +1,104 @@
+/* src/sections/About.module.css */
+.aboutContainer {
+    padding: 4rem 2rem; /* Generous padding */
+    background-color: #ffffff; /* White background for contrast with Hero */
+    display: flex;
+    flex-direction: column; /* Default for mobile */
+    align-items: center;
+    gap: 2rem; /* Space between elements if stacked */
+  }
+  
+  .contentWrapper {
+    display: flex;
+    flex-direction: column; /* Stacks photo and text on mobile by default */
+    align-items: center;
+    gap: 2rem;
+    max-width: 900px; /* Max width for content */
+    width: 100%;
+  }
+  
+  .profileImageContainer {
+    flex-shrink: 0; /* Prevent image from shrinking too much */
+  }
+  
+  .profileImage {
+    width: 200px; /* Adjust size as needed */
+    height: 200px;
+    border-radius: 50%; /* Circular photo */
+    object-fit: cover; /* Ensure image covers the area without distortion */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 3px solid #007bff; /* Optional border */
+  }
+  
+  .textContainer {
+    flex-grow: 1;
+    text-align: left; /* Align text to the left for readability */
+  }
+  
+  .textContainer h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: #212529;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+    text-align: center; /* Center the "About Me" title */
+  }
+  
+  /* Optional: Underline effect for the title */
+  .textContainer h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px; /* Width of the underline */
+    height: 3px; /* Thickness of the underline */
+    background-color: #007bff;
+  }
+  
+  .textContainer p {
+    font-size: clamp(1rem, 1.8vw, 1.1rem);
+    line-height: 1.7;
+    color: #495057;
+    margin-bottom: 1em;
+  }
+  
+  .textContainer p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Responsive adjustments for wider screens */
+  @media (min-width: 768px) {
+    .aboutContainer {
+      padding: 5rem 2rem;
+    }
+  
+    .contentWrapper {
+      flex-direction: row; /* Side-by-side layout for photo and text */
+      align-items: flex-start; /* Align items to the top */
+      gap: 3rem; /* Increased gap for wider screens */
+    }
+  
+    .profileImageContainer {
+      /* Adjust order if you want image on the right: order: 1; */
+      order: 1;
+    }
+  
+    .profileImage {
+      width: 250px; /* Slightly larger image on wider screens */
+      height: 250px;
+    }
+  
+    .textContainer {
+      text-align: left;
+    }
+  
+    .textContainer h2 {
+      text-align: left; /* Align title to left on wider screens */
+    }
+  
+    .textContainer h2::after {
+      left: 0; /* Align underline to left */
+      transform: translateX(0);
+    }
+  }

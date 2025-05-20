@@ -1,0 +1,99 @@
+.card {
+    background-color: #2a9d8f;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* To contain image and ensure rounded corners are visible */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .imageContainer {
+    width: 100%;
+    height: 200px; /* Fixed height for image container */
+    overflow: hidden;
+  }
+  
+  .cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the area, might crop */
+    display: block;
+  }
+  
+  .cardContent {
+    padding: 1.5rem;
+    flex-grow: 1; /* Allows content to take available space */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cardTitle {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .cardDescription {
+    font-size: 0.95rem;
+    color: #141313;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex-grow: 1; /* Pushes links to the bottom */
+  }
+  
+  .techStack {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .techTag {
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+  }
+  
+  .cardLinks {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto; /* Pushes to bottom if description is short */
+  }
+  
+  .cardLink {
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    display: inline-flex; /* For icon alignment if added later */
+    align-items: center;
+    gap: 0.3rem;
+  }
+  
+  .cardLink.github {
+    background-color: #f4a261; 
+    color: #264653;
+  }
+  
+  .cardLink.github:hover {
+    background-color: #ca8b58; 
+  }
+  
+  .cardLink:hover {
+    background-color: #0056b3;
+    color: white;
+  }

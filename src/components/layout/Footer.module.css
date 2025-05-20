@@ -1,0 +1,75 @@
+/* src/components/layout/Footer.module.css */
+.footer {
+    background-color: #1a1d20;/* Dark footer */
+    color: #adb5bd; /* Light gray text */
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    position: relative;
+  }
+  
+  .footer p {
+    margin: 0.5rem 0;
+  }
+  
+  .footer a {
+    color: #00aaff; /* Brighter link for dark bg */
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .socialLinksFooter { /* Reusing class name from Hero for consistency if desired */
+    margin-top: 1rem; /* Space above social links */
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .socialLinkFooter {
+    color: #adb5bd;
+    font-size: 1.5rem;
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  }
+  
+  .socialLinkFooter:hover {
+    color: #00aaff;
+    transform: scale(1.1);
+  }
+
+  .scrollToTop {
+    position: fixed; /* Key change */
+    bottom: 30px;    /* Adjust vertical position from viewport bottom */
+    right: 30px;     /* Adjust horizontal position from viewport right */
+    background-color: #e76f51; 
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 45px;  /* Slightly larger */
+    height: 45px; /* Slightly larger */
+    font-size: 1.6rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3); /* Slightly stronger shadow */
+    transition: background-color 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    opacity: 0; 
+    visibility: hidden;
+    transform: translateY(20px); /* Start slightly lower for entry animation */
+    z-index: 1000; /* Ensure it's on top */
+  }
+  
+  .scrollToTop.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Animate into view */
+  }
+  
+  .scrollToTop:hover {
+    background-color: #f4a261;
+    transform: translateY(-2px) scale(1.05); /* Slight lift and scale on hover */
+  }
