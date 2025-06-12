@@ -17,8 +17,8 @@ const myProjects = [
     description: "A collaborative task management tool allowing users to create, assign, and track tasks. Features real-time updates using WebSockets.",
     imageUrl: "/images/project-task-app.jpg", // Example: place images in public/images/
     techStack: ["React", "Firebase", "Material UI", "Context API"],
-    liveUrl: "https://your-live-demo-link2.com",
-    githubUrl: "https://github.com/yourusername/project-task-app",
+    liveUrl: "https://yams-task-manager.netlify.app/",
+    githubUrl: "https://github.com/YAMOUSTO/task-manager",
   },
   {
     title: "Portfolio Website V1",
