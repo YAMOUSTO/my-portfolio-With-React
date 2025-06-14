@@ -10,8 +10,8 @@ function App() {
   return (
     <>
      <Navbar />  
-      <main style={{ paddingTop: '50px' }}> {/* Add padding to main to offset fixed navbar height */}
-                                         {/* Adjust 80px based on your actual navbar height */}
+      <main style={{ paddingTop: '50px' }}> 
+                  
         <Hero />
         <About />
         <Skills />
