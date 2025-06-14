@@ -1,7 +1,6 @@
-/* src/sections/Projects.module.css */
 .projectsContainer {
     padding: 4rem 2rem;
-    background-color: #ffffff; /* Or a very light contrasting color */
+    background-color: #ffffff; 
     text-align: center;
   }
   
@@ -26,11 +25,10 @@
   
   .projectsGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid for project cards */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2.5rem;
-    max-width: 1200px; /* Allow more width for project cards */
+    max-width: 1200px; 
     margin: 0 auto;
   }
   
   
-  /* Styling for individual project cards will go into ProjectCard.module.css */

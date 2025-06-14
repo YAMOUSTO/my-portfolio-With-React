@@ -6,6 +6,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import translationEN from './locales/en/translation.json';
 import translationFR from './locales/fr/translation.json';
 import translationAR from './locales/ar/translation.json';
+import translationTR from './locales/tr/translation.json'; // Assuming you have Turkish translations
 
 const resources = {
   en: {
@@ -17,6 +18,9 @@ const resources = {
   ar: {
     translation: translationAR,
   },
+  tr: {
+    translation: translationTR, 
+  }
 };
 
 i18n

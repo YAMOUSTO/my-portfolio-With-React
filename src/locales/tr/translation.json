@@ -1,0 +1,62 @@
+{
+  "navbar": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımda", 
+    "skills": "Yetenekler", 
+    "projects": "Projelerim", 
+    "contact": "İletişim" 
+  },
+  "hero": {
+    "name": "Yamoussa Soumah", 
+    "tagline": "Full-Stack Web Geliştirici | Yenilikçi Dijital Çözümler Üretiyorum", 
+    "ctaProjects": "Projelerimi Görüntüle" 
+  },
+  "about": {
+    "title": "Hakkımda", 
+    "p1": "Merhaba! Ben Yamoussa Soumah, zarif, verimli ve kullanıcı dostu dijital deneyimler oluşturma konusunda yetenekli, tutkulu ve kendini işine adamış bir Junior Web Geliştiricisiyim. Web geliştirme yolculuğum, web sitelerinin fikirleri etkileşimli gerçekliklere nasıl dönüştürebileceğine olan hayranlığımla başladı ve bu ilgi tam anlamıyla bir tutkuya dönüştü.",
+    "p2": "Karmaşık problemleri çözmekten ve sürekli olarak yeni teknolojiler öğrenmekten büyük keyif alıyorum. MERN yığını (MongoDB, Express.js, React, Node.js) konusunda uzmanım, ancak daha iyi ve daha verimli uygulamalar geliştirmeme yardımcı olabilecek yeni araçları ve frameworkleri keşfetmeye her zaman açığım. Amacım, becerilerimi anlamlı projelere katkı sağlamak için kullanmak ve olumlu bir etki yaratmak.",
+    "p3": "Kod yazmadığım zamanlarda yeni teknoloji trendlerini keşfetmekten hoşlanırım. İş birliğinin gücüne inanıyorum ve yenilikçi fikirleri hayata geçirmek için benimle aynı düşünceye sahip insanlarla çalışmaktan her zaman heyecan duyuyorum."
+},
+  "projects": {
+    "title": "Projelerim",
+    "description": "Üzerinde çalıştığım, becerilerimi ve geliştirme tutkumu sergileyen projelerden bazıları burada.",
+    "noProjects": "Henüz görüntülenecek proje yok. Lütfen daha sonra tekrar kontrol edin!",
+    "projectCard": {
+      "liveDemo": "Canlı Demo",
+      "viewCode": "Kodu Görüntüle"
+    },
+    "project1": {
+      "title": "E-ticaret Platformu", 
+      "description": "Ürün listeleri, sepet işlevselliği, kullanıcı kimlik doğrulaması ve bir yönetici paneli içeren tam özellikli bir e-ticaret web sitesi. MERN yığını ile oluşturulmuştur."
+    },
+    "project2": {
+      "title": "Görev Yönetimi Uygulaması", 
+      "description": "Kullanıcıların görev oluşturmasına, atamasına ve izlemesine olanak tanıyan işbirlikçi bir görev yönetimi aracı. WebSockets kullanarak gerçek zamanlı güncellemeler içerir."
+    },
+    "project3": {
+      "title": "Portföy Web Sitesi V1", 
+      "description": "Becerilerimi ve projelerimi sergilemek için oluşturduğum önceki portföy web sitem. Temiz tasarıma ve duyarlılığa odaklanmıştır."
+    }
+  },
+  "contact": {
+    "title": "Benimle İletişime Geçin",
+    "description": "Bir projeniz var mı veya sadece sohbet mi etmek istiyorsunuz? Lütfen benimle iletişime geçmekten çekinmeyin!",
+    "form": {
+      "name": "Adınız",
+      "email": "E-posta Adresiniz",
+      "message": "Mesajınız",
+      "submit": "Gönder"
+    }
+  },
+    "skills": {
+        "title": "Yetenekler",
+        "description": "Düzenli olarak çalıştığım bazı teknolojiler ve araçlar:",
+        "list": [
+        "HTML, CSS, JavaScript",
+        "React, Vue.js",
+        "Node.js, Express",
+        "MongoDB, MySQL",
+        "Git, GitHub"
+        ]
+    }
+}

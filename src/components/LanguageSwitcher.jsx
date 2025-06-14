@@ -14,31 +14,6 @@ function LanguageSwitcher() {
 
   return (
     <div className={styles.languageSwitcher}>
-     {/*   <button 
-        onClick={() => changeLanguage('en')} 
-        className={currentLanguage.startsWith('en') ? styles.active : ''}
-        aria-pressed={currentLanguage.startsWith('en')}
-        title="Switch to English"
-      >
-        EN
-      </button>
-      <button 
-        onClick={() => changeLanguage('fr')} 
-        className={currentLanguage.startsWith('fr') ? styles.active : ''}
-        aria-pressed={currentLanguage.startsWith('fr')}
-        title="Passer au Français"
-      >
-        FR
-      </button>
-      <button 
-        onClick={() => changeLanguage('ar')} 
-        className={currentLanguage.startsWith('ar') ? styles.active : ''}
-        aria-pressed={currentLanguage.startsWith('ar')}
-        title="التحول إلى العربية"
-      >
-        AR
-      </button>
-      */}
      
       
       <FaGlobe className={styles.globeIcon} />
@@ -46,6 +21,7 @@ function LanguageSwitcher() {
         <option value="en">English</option>
         <option value="fr">Français</option>
         <option value="ar">العربية</option>
+        <option value="tr">Türkçe</option> 
       </select>
       
     </div>
