@@ -1,56 +1,64 @@
+// src/sections/Projects.jsx
 import React from 'react';
 import styles from './Projects.module.css';
-import ProjectCard from '../components/ProjectCard'; // Import ProjectCard
+import ProjectCard from '../components/ProjectCard'; // Make sure ProjectCard is also translated
+import { useTranslation } from 'react-i18next';
 
-// Placeholder project data - REPLACE THIS WITH YOUR ACTUAL PROJECTS
-const myProjects = [
+// Project data should now ideally just contain keys or non-translatable info
+// The translatable parts (title, description) will be fetched using t()
+const projectDefinitions = [
   {
-    title: "E-commerce Platform",
-    description: "A full-featured e-commerce website with product listings, cart functionality, user authentication, and an admin panel. Built with the MERN stack.",
-    imageUrl: "/images/project-ecommerce.jpg", // Path relative to public folder, or import if in src/assets
+    id: 'project1', // Unique ID for keys
+    translationKeyPrefix: 'projects.project1', // Prefix for title and description keys
+    imageUrl: "/images/project-ecommerce.jpg",
     techStack: ["React", "Node.js", "Express", "MongoDB", "Redux", "Stripe API"],
-    liveUrl: "https://your-live-demo-link1.com",
+    liveUrl: "https://your-live-demo-link1.com", // This might need to stay hardcoded or be part of a non-translatable config
     githubUrl: "https://github.com/yourusername/project-ecommerce",
   },
   {
-    title: "Task Management App",
-    description: "A collaborative task management tool allowing users to create, assign, and track tasks. Features real-time updates using WebSockets.",
-    imageUrl: "/images/project-task-app.jpg", // Example: place images in public/images/
+    id: 'project2',
+    translationKeyPrefix: 'projects.project2',
+    imageUrl: "/images/project-task-app.jpg",
     techStack: ["React", "Firebase", "Material UI", "Context API"],
     liveUrl: "https://yams-task-manager.netlify.app/",
     githubUrl: "https://github.com/YAMOUSTO/task-manager",
   },
   {
-    title: "Portfolio Website V1",
-    description: "My previous portfolio website built to showcase my skills and projects. Focused on clean design and responsiveness.",
-    // imageUrl: "", // Example of using placeholder
+    id: 'project3',
+    translationKeyPrefix: 'projects.project3',
+    // imageUrl: "", // Let ProjectCard handle fallback
     techStack: ["HTML", "CSS", "JavaScript"],
-     liveUrl: "https://yamstechnovasou.netlify.app/", // If it's still live
+    liveUrl: "https://yamstechnovasou.netlify.app/",
     githubUrl: "https://github.com/YAMOUSTO/Responsive-Portfolio",
   },
-  // Add 1-2 more of your best projects
+  // Add more project definitions here
 ];
 
 function Projects() {
+  const { t } = useTranslation();
+
   return (
     <section id="projects" className={styles.projectsContainer}>
-      <h2>My Projects</h2>
-      {myProjects.length > 0 ? (
+      <h2>{t('projects.title')}</h2> {/* Using default from JSON now */}
+      <p style={{ marginBottom: '2rem' }}>{t('projects.description')}</p>
+      
+      {projectDefinitions.length > 0 ? (
         <div className={styles.projectsGrid}>
-          {myProjects.map((project, index) => (
+          {projectDefinitions.map((project) => (
             <ProjectCard
-              key={index}
-              title={project.title}
-              description={project.description}
+              key={project.id}
+              // Pass translated title and description
+              title={t(`${project.translationKeyPrefix}.title`)}
+              description={t(`${project.translationKeyPrefix}.description`)}
               imageUrl={project.imageUrl}
-              techStack={project.techStack}
+              techStack={project.techStack} // Tech stack usually not translated
               liveUrl={project.liveUrl}
               githubUrl={project.githubUrl}
             />
           ))}
         </div>
       ) : (
-        <p>No projects to display yet. Check back soon!</p>
+        <p>{t('projects.noProjects')}</p>
       )}
     </section>
   );

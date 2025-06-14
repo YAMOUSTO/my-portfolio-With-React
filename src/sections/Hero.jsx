@@ -1,33 +1,37 @@
-// src/sections/Hero.jsx
 import React from 'react';
 import styles from './Hero.module.css';
-// Import desired icons
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'; // Example icons
+import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'; 
+import {useTranslation} from 'react-i18next';
 
 function Hero() {
+  const {t} = useTranslation();
   const name = "Yamoussa Soumah";
-  const tagline = "Full-Stack Web Developer | Crafting Innovative Digital Solutions";
+  const tagline = "Junior Web Developer | Crafting Innovative Digital Solutions";
   const ctaText = "View My Projects";
   const ctaLink = "#projects";
 
-  // Update with your actual URLs and choose icons
+
   const socialMedia = [
     {
       name: 'GitHub',
-      url: 'https://github.com/YSOUMAH', // <<< YOUR GITHUB URL
+      url: 'https://github.com/YSOUMAH', 
       icon: <FaGithub />,
     },
     {
       name: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/yamoussa-soumah-374769260/', // <<< YOUR LINKEDIN URL
+      url: 'https://www.linkedin.com/in/yamoussa-soumah-374769260/', 
       icon: <FaLinkedin />,
     },
      {
        name: 'Twitter',
-       url: 'https://twitter.com/yourusername', // <<< YOUR TWITTER URL (Optional)
+       url: 'https://twitter.com/yourusername', 
        icon: <FaTwitter />,
-     },
-    // Add more as needed (e.g., Dev.to, Medium using appropriate icons)
+     }, 
+     {
+      name: 'instagram',
+      url: 'https://instagram.com/username',
+      icon: <FaFacebook/>
+     }
   ];
 
   return (
@@ -35,7 +39,7 @@ function Hero() {
       <h1 className={styles.nameTitle}>{name}</h1>
       <p className={styles.subtitle}>{tagline}</p>
       <a href={ctaLink} className={styles.ctaButton}>
-        {ctaText}
+        {t(ctaText)}
       </a>
       <div className={styles.socialLinks}>
         {socialMedia.map((social) => (
@@ -46,7 +50,7 @@ function Hero() {
             rel="noopener noreferrer"
             className={styles.socialLink}
             aria-label={`Link to my ${social.name} profile`}
-            title={social.name} // Good for accessibility and tooltips
+            title={social.name} 
           >
             {social.icon}
           </a>

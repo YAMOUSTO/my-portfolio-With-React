@@ -1,0 +1,50 @@
+.languageSwitcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; 
+  margin-left: 1rem; 
+}
+
+.languageSwitcher button {
+  background: none;
+  border: 1px solid transparent; 
+  color: #e9c46a; 
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.languageSwitcher button:hover {
+  background-color: rgba(244, 162, 97, 0.2); 
+  color: #f4a261;
+}
+
+.languageSwitcher button.active {
+  background-color: #f4a261; 
+  color: #264653; 
+  border-color: #f4a261;
+}
+
+
+.globeIcon {
+  font-size: 1.2rem;
+  color: #e9c46a; 
+  margin-right: 0.3rem;
+}
+
+.languageSwitcher select {
+  background-color: transparent;
+  color: #e9c46a;
+  border: 1px solid #e9c46a;
+  padding: 0.3rem;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.languageSwitcher select option {
+  background-color: #264653;
+  color: #e9c46a;
+}

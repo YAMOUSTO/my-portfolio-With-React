@@ -1,0 +1,70 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Yamoussa Soumah",
+    "tagline": "Full-Stack Web Developer | Crafting Innovative Digital Solutions",
+    "ctaProjects": "View My Projects"
+  },
+  "about": {
+    "title": "About Me",
+    "p1": "Hello! I'm Yamoussa Soumah, a passionate and dedicated Full-Stack Web Developer with a knack for creating elegant, efficient, and user-friendly digital experiences. My journey into web development started with a fascination for how websites could transform ideas into interactive realities, and it has grown into a full-fledged passion.",
+    "p2": "I thrive on solving complex problems and continuously learning new technologies. I specialize in the MERN stack (MongoDB, Express.js, React, Node.js) but I'm always eager to explore new tools and frameworks that can help me build better and more performant applications. My goal is to leverage my skills to contribute to meaningful projects that make a positive impact.",
+    "p3": "When I'm not coding, I enjoy exploring new tech trends. I believe in the power of collaboration and am always excited to work with like-minded individuals to bring innovative ideas to life."
+  },
+  "skills": {
+    "title": "Skills",
+    "description": "Here are some of the technologies and tools I regularly work with:",
+    "list": [
+      "HTML, CSS, JavaScript",
+      "React, Vue.js",
+      "Node.js, Express",
+      "MongoDB, MySQL",
+      "Git, GitHub"
+    ]
+  },
+  "projects": {
+    "title": "My Projects",
+    "description": "Here are some of the projects I've worked on, showcasing my skills and passion for development.",
+    "noProjects": "No projects to display yet. Check back soon!",
+    "projectCard": {
+      "liveDemo": "Live Demo",
+      "viewCode": "View Code"
+    },
+    "project1": {
+      "title": "E-commerce Platform",
+      "description": "A full-featured e-commerce website with product listings, cart functionality, user authentication, and an admin panel. Built with the MERN stack."
+    },
+    "project2": {
+      "title": "Task Management App",
+      "description": "A collaborative task management tool allowing users to create, assign, and track tasks. Features real-time updates using WebSockets."
+    },
+    "project3": {
+      "title": "Portfolio Website V1",
+      "description": "My previous portfolio website built to showcase my skills and projects. Focused on clean design and responsiveness."
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Have a project in mind or just want to chat? Feel free to reach out!",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send"
+    }
+  },
+  "footer": {
+    "text": "© 2023 Yamoussa Soumah. All rights reserved.",
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter"
+    }
+  }
+}

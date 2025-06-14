@@ -1,0 +1,71 @@
+{
+  "navbar": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Yamoussa Soumah",
+    "tagline": "Développeur Web Full-Stack | Création de Solutions Numériques Innovantes",
+    "ctaProjects": "Voir Mes Projets"
+  },
+  "about": {
+    "title": "À Propos de Moi",
+    
+    "p1": "Bonjour ! Je suis Yamoussa Soumah, un développeur web Full-Stack passionné et dévoué, doté d’un talent pour créer des expériences numériques élégantes, efficaces et conviviales. Mon aventure dans le développement web a commencé par une fascination pour la façon dont les sites pouvaient transformer des idées en réalités interactives, et elle s’est transformée en une véritable passion.",
+    "p2": "J’aime résoudre des problèmes complexes et apprendre continuellement de nouvelles technologies. Je me spécialise dans la stack MERN (MongoDB, Express.js, React, Node.js), mais je suis toujours curieux d’explorer de nouveaux outils et frameworks pour créer des applications encore meilleures et plus performantes. Mon objectif est de mettre mes compétences au service de projets porteurs de sens et d’impact positif.",
+    "p3": "Quand je ne code pas, j’aime explorer les nouvelles tendances technologiques. Je crois au pouvoir de la collaboration et je suis toujours enthousiaste à l’idée de travailler avec des personnes partageant les mêmes idées pour donner vie à des projets innovants."
+  },
+    "skills": {
+        "title": "Compétences",
+        "description": "Voici quelques-unes des technologies et outils avec lesquels je travaille régulièrement :",
+        "list": [
+        "HTML, CSS, JavaScript",
+        "React, Vue.js",
+        "Node.js, Express",
+        "MongoDB, MySQL",
+        "Git, GitHub"
+        ]
+    },
+  "projects": {
+    "title": "Mes Projets",
+    "description": "Voici quelques projets sur lesquels j'ai travaillé, mettant en avant mes compétences et ma passion pour le développement.",
+    "noProjects": "Aucun projet à afficher pour le moment. Revenez bientôt !",
+    "projectCard": {
+      "liveDemo": "Démo en Direct",
+      "viewCode": "Voir le Code"
+    },
+    "project1": {
+      "title": "Plateforme E-commerce",
+      "description": "Un site e-commerce complet avec des listes de produits, une fonctionnalité de panier, une authentification utilisateur et un panneau d'administration. Construit avec la stack MERN."
+    },
+    "project2": {
+      "title": "Application de Gestion de Tâches",
+      "description": "Un outil collaboratif de gestion de tâches permettant aux utilisateurs de créer, assigner et suivre des tâches. Comprend des mises à jour en temps réel via WebSockets."
+    },
+    "project3": {
+      "title": "Site Web Portfolio V1",
+      "description": "Mon ancien site portfolio construit pour présenter mes compétences et projets. Axé sur un design épuré et une réactivité optimale."
+    }
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "description": "Vous avez un projet en tête ou souhaitez simplement discuter ? N'hésitez pas à me contacter !",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Envoyer"
+    }
+  },
+  "footer": {
+    "text": "© 2023 Yamoussa Soumah. Tous droits réservés.",
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter"
+    }
+  }
+}

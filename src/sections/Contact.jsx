@@ -1,8 +1,9 @@
-// src/sections/Contact.jsx
 import React, { useState } from 'react';
 import styles from './Contact.module.css';
+import { useTranslation } from 'react-i18next';
 
 function Contact() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -10,8 +11,7 @@ function Contact() {
   });
   const [status, setStatus] = useState('');
 
-  // *** YOUR FORMSPREE ENDPOINT IS HERE ***
-  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xkgrevdy'; // <<< YOUR ENDPOINT
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xkgrevdy';
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,12 +23,10 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus('Sending...');
+    setStatus(t('loading.message', 'Sending...'));
 
-    // Basic check to ensure the endpoint looks like a Formspree URL (optional but good practice)
     if (!FORMSPREE_ENDPOINT || !FORMSPREE_ENDPOINT.includes('/f/')) {
         setStatus('Formspree endpoint not configured correctly. Please check the code.');
-        // Clear status message after a few seconds
         setTimeout(() => setStatus(''), 5000);
         return;
     }
@@ -38,89 +36,83 @@ function Contact() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json' // Important for Formspree to process AJAX request correctly
+          'Accept': 'application/json'
         },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
-        // Formspree typically returns {ok: true} or just a 200 status on success for AJAX
-        // We can also check response.json() if more detailed success/error messages are provided
-        // For simplicity, we'll assume response.ok is sufficient for success
-        setStatus('Message sent successfully! Thank you.');
-        setFormData({ name: '', email: '', message: '' }); // Clear the form
+        setStatus(t('success.formSubmitted', 'Message sent successfully! Thank you.'));
+        setFormData({ name: '', email: '', message: '' });
       } else {
-        // Try to get more detailed error from Formspree if available
-        const errorData = await response.json().catch(() => ({})); // Try to parse error, default to empty object
+        const errorData = await response.json().catch(() => ({}));
         const errorMessage = errorData.errors 
                              ? errorData.errors.map(err => err.message || err.field || err).join(', ') 
                              : `Failed to send message. Status: ${response.status}. Please try again.`;
         setStatus(errorMessage);
       }
     } catch (error) {
-      console.error("Submission error (Network or other client-side issue):", error);
-      setStatus('An error occurred while sending your message. Please check your connection and try again.');
+      setStatus(t('error.serverError', 'An error occurred while sending your message. Please check your connection and try again.'));
     }
 
-    // Clear status message after a few seconds, regardless of success or failure
-    setTimeout(() => setStatus(''), 7000); // Increased time for user to read
+    setTimeout(() => setStatus(''), 7000);
   };
 
   return (
     <section id="contact" className={styles.contactContainer}>
-      <h2>Get In Touch</h2>
+      <h2>{t('contact.title', 'Get In Touch')}</h2>
       <p className={styles.subtitle}>
-        Have a project in mind or just want to say hi? Feel free to reach out!
+        {t('contact.description', 'Have a project in mind or just want to say hi? Feel free to reach out!')}
       </p>
       <form onSubmit={handleSubmit} className={styles.contactForm}>
         <div className={styles.formGroup}>
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">{t('contact.form.name', 'Name')}</label>
           <input
             type="text"
             id="name"
-            name="name" // 'name' attribute is crucial for Formspree
+            name="name"
             value={formData.name}
             onChange={handleChange}
             required
-            placeholder="Your Name"
+            placeholder={t('contact.form.name', 'Your Name')}
           />
         </div>
         <div className={styles.formGroup}>
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">{t('contact.form.email', 'Email')}</label>
           <input
             type="email"
             id="email"
-            name="email" // 'name' attribute is crucial for Formspree
+            name="email"
             value={formData.email}
             onChange={handleChange}
             required
-            placeholder="Your Email Address"
+            placeholder={t('contact.form.email', 'Your Email Address')}
           />
         </div>
         <div className={styles.formGroup}>
-          <label htmlFor="message">Message</label>
+          <label htmlFor="message">{t('contact.form.message', 'Message')}</label>
           <textarea
             id="message"
-            name="message" // 'name' attribute is crucial for Formspree
+            name="message"
             value={formData.message}
             onChange={handleChange}
             required
-            placeholder="Your Message"
+            placeholder={t('contact.form.message', 'Your Message')}
           ></textarea>
         </div>
         <button 
             type="submit" 
             className={styles.submitButton} 
-            disabled={status === 'Sending...'}
+            disabled={status === t('loading.message', 'Sending...')}
         >
-          {status === 'Sending...' ? 'Sending...' : 'Send Message'}
+          {status === t('loading.message', 'Sending...') ? t('loading.message', 'Sending...') : t('contact.form.submit', 'Send Message')}
         </button>
         {status && (
             <p 
                 style={{ 
                     marginTop: '1rem', 
                     textAlign: 'center', 
-                    color: status.toLowerCase().includes('successfully') ? 'lightgreen' : 'pink',
+                    color: status.toLowerCase().includes('success') ? 'lightgreen' : 'pink',
                     fontWeight: '500'
                 }}
             >
