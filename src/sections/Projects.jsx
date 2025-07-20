@@ -8,9 +8,9 @@ const projectDefinitions = [
     id: 'project1', 
     translationKeyPrefix: 'projects.project1', 
     imageUrl: "/images/project-ecommerce.jpg",
-    techStack: ["Vue", "Laravel", "MySQL", "Tailwind CSS"],
-    liveUrl: "https://your-live-demo-link1.com", 
-    githubUrl: "https://github.com/yourusername/project-ecommerce",
+    techStack: ["Vue", "Python", "MySQL", "Tailwind CSS"],
+    liveUrl: "https://sylishop.netlify.app/", 
+    githubUrl: "https://github.com/YAMOUSTO/Full-Stuck-Ecommerce",
   },
   {
     id: 'project2',
